@@ -1,0 +1,23 @@
+{
+  "manifest_version": 3,
+  "name": "DeepSeek Chat Saver",
+  "version": "1.0",
+  "description": "Save DeepSeek chat conversations as markdown files",
+  "permissions": [
+    "activeTab",
+    "downloads",
+    "storage"
+  ],
+  "host_permissions": [
+    "*://*.deepseek.com/*"
+  ],
+  "action": {
+    "default_popup": "popup.html"
+  },
+  "content_scripts": [
+    {
+      "matches": ["*://*.deepseek.com/*"],
+      "js": ["content.js"]
+    }
+  ]
+} 
